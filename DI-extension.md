@@ -3,12 +3,12 @@
 
 <div align="center">__Un petit retour d'experiance: comment charger une extension DI symfony__</div>
 
-La création et chrgement d'une extension, pour une architecture de dossiers qui ne suit pas la convention  de suffixer avec `Bundle`, eg: `AppBundle`<br>
+La création et chargement d'une extension, pour une architecture de dossiers qui ne suit pas la convention  de suffixer avec `Bundle`, eg: `AppBundle`<br>
 Il y a deux solutions à proposer pour aboutir à enregistrer au niveau de la configuration du conteneur <a href="http://api.symfony.com/3.1/Symfony/Component/DependencyInjection/ContainerBuilder.html">containerBuider</a> associé au `kernel` du symfony.
 
 **Pourquoi Les Extensions Symfony ?**
 
-Symfony à la base de ces composant implémentés, comporte des extensions comme celle de FormExtenion, celle du TwigExtension, DoctrineExtension etc ... ,qui héritent chaqune de la classe `Extension`.
+Symfony à la base de ces composants implémentés, comporte des extensions comme celle de FormExtenion, celle du TwigExtension, DoctrineExtension etc ... ,qui héritent chaqune de la classe `Extension`.
 
 Une nouvelle extension va nous permetre, soit de charger des définitions de services à partir de fichiers de configuration soit de définir des services pour une telle application de manière plus **dynamique**. 
 
@@ -85,8 +85,8 @@ class AppContextExtension extends Extension
     }
 }
 ```
-Après il suffit d'enregistrer la classe.
-config/bundles.php
+Après il suffit d'enregistrer la classe comme étant un bundle.
+soit sous `config/bundles.php` si la version du framework >=4 soit sous l'`AppKernel.php` si la version <= 3.4.8 
 ```php
 Portal\Common\Infrastructure\Symfony\AppContextBundle::class => ['all' => true],
 ```
