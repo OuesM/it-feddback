@@ -8,11 +8,11 @@ Il y a deux solutions à proposer pour aboutir à enregistrer au niveau de la co
 
 **Pourquoi Les Extensions Symfony ?**
 
-Symfony à la base de ces composant implémentés, comporte des extensions comme le celle de FormExtenion, celle du TwigExtension, DoctrineExtension etc ... ,qui héritent chaqune de la classe `Extension`.
+Symfony à la base de ces composant implémentés, comporte des extensions comme celle de FormExtenion, celle du TwigExtension, DoctrineExtension etc ... ,qui héritent chaqune de la classe `Extension`.
 
 Une nouvelle extension va nous permetre, soit de charger des définitions de services à partir de fichiers de configuration soit de définir des services pour une telle application de manière plus **dynamique**. 
 
-Par exemple, je me suis trouvé devant une situation dans laquelle je dois typer (type hint) avec l'une des deux classes abstraites soit `GainMemberAbstrait` soit `BarestoMemberAbstrait`, et là, le choix de la classe souhaitée dépend d'une paramétre pré configuré au niveau de `parameters.yml` , ainsi pour implémenter le besoin, il faudrait créer une extension pour configurer le conteneur syfmony pour puisse choisir et charger par la suite la classe souhaitée.
+Par exemple, je me suis trouvé devant une situation dans laquelle je dois typer (type hint) avec l'une des deux classes abstraites soit `GainMemberAbstrait` soit `BarestoMemberAbstrait`, et là, le choix de la classe souhaitée dépend d'une paramétre pré configuré au niveau de `parameters.yml` , ainsi pour implémenter le besoin, il faudrait créer une extension pour configurer le conteneur syfmony pour qui'l puisse choisir et charger par la suite la classe souhaitée.
 
 **Pourquoi les extensions ne sont pas chargées d’une façon automatique ?**
 
